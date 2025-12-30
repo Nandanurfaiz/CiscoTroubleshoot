@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINAL PROJECT - LKP INDO JAYA</title>
+    <title>TROUBLESHOOTING CHALLENGE - LKP INDO JAYA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
@@ -19,8 +19,8 @@
             transition: all 0.3s;
         }
         .cyber-border:hover {
-            border-color: #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            border-color: #f43f5e; /* Merah Muda untuk kesan Urgent */
+            box-shadow: 0 0 15px rgba(244, 63, 94, 0.3);
         }
         .btn-cyber {
             background: #1e293b;
@@ -53,13 +53,13 @@
         /* Report Card Style */
         .report-card {
             background: #0f172a;
-            border: 4px solid #38bdf8;
-            background-image: linear-gradient(0deg, transparent 24%, rgba(56, 189, 248, .05) 25%, rgba(56, 189, 248, .05) 26%, transparent 27%, transparent 74%, rgba(56, 189, 248, .05) 75%, rgba(56, 189, 248, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(56, 189, 248, .05) 25%, rgba(56, 189, 248, .05) 26%, transparent 27%, transparent 74%, rgba(56, 189, 248, .05) 75%, rgba(56, 189, 248, .05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
+            border: 4px solid #f43f5e;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
         }
         /* Modal Style */
         .modal {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.95);
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             display: flex;
@@ -74,132 +74,145 @@
     <div id="mainDashboard" class="p-4 md:p-8 pb-20 transition-opacity duration-500">
         
         <div class="max-w-5xl mx-auto mb-8 text-center border-b border-gray-700 pb-6">
-            <h2 class="text-xl md:text-2xl text-blue-400 font-bold tracking-widest mb-2">LKP INDO JAYA</h2>
-            <h1 class="text-3xl md:text-5xl text-white font-bold glow">PROJECT: SMART OFFICE</h1>
-            <p class="text-gray-400 mt-2">Final Assessment & Troubleshooting</p>
+            <h2 class="text-xl md:text-2xl text-red-400 font-bold tracking-widest mb-2">LKP INDO JAYA</h2>
+            <h1 class="text-3xl md:text-5xl text-white font-bold glow">TROUBLESHOOTING CHALLENGE</h1>
+            <p class="text-gray-400 mt-2">Status Jaringan: <span class="text-red-500 animate-pulse">CRITICAL DOWN</span></p>
             
             <div class="mt-6 bg-gray-800 h-6 rounded-full overflow-hidden border border-gray-600 w-full max-w-2xl mx-auto">
-                <div id="progressBar" class="bg-blue-600 h-full w-0 transition-all duration-1000 flex items-center justify-center text-xs text-white font-bold">0%</div>
+                <div id="progressBar" class="bg-red-600 h-full w-0 transition-all duration-1000 flex items-center justify-center text-xs text-white font-bold">0%</div>
             </div>
             
             <div class="mt-6 max-w-md mx-auto">
-                <input type="text" id="studentName" placeholder="Ketik Nama Lengkap Anda..." class="w-full bg-gray-900 border border-blue-500 p-3 text-white text-center rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input type="text" id="studentName" placeholder="Masukkan Nama Teknisi (Siswa)..." class="w-full bg-gray-900 border border-red-500 p-3 text-white text-center rounded focus:outline-none focus:ring-2 focus:ring-red-400">
             </div>
         </div>
 
         <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="lg:col-span-2 space-y-6">
+                
                 <div class="cyber-border p-5 rounded bg-gray-900" id="mission1">
                     <div class="flex justify-between items-center mb-2">
-                        <h2 class="text-xl text-blue-400 font-bold">MISI 1: NAT CONNECTION</h2>
+                        <h2 class="text-xl text-blue-400 font-bold">LEVEL 1 & 2: KONEKSI DASAR</h2>
                         <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">PENDING</span>
                     </div>
-                    <p class="mb-4 text-sm text-gray-300">Konfigurasi NAT Overload agar IP Lokal bisa akses Internet (8.8.8.8).</p>
+                    <p class="mb-4 text-sm text-gray-300">Router mati dan PC Admin tidak bisa Ping ke Gateway.</p>
                     <div class="space-y-3">
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="1" data-label="Setup IP Router">
-                            <span>Set IP Address Router (G0/0 & G0/1)</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="1" data-label="Router Port ON">
+                            <span>Nyalakan Interface Router (No Shutdown)</span>
                         </label>
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="1" data-label="Set NAT Inside/Outside">
-                            <span>Set Interface Inside & Outside</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="1" data-label="NAT Overload Active">
-                            <span>Aktifkan NAT Overload</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="1" data-label="Fix PC Gateway">
+                            <span>Perbaiki Default Gateway di PC-Admin</span>
                         </label>
                         <div class="doc-hint p-2 border border-dashed border-yellow-600 rounded bg-yellow-900/20">
-                            <span>📷 <strong>DOKUMENTASI:</strong> Screenshot hasil perintah <code>show ip nat translations</code> di Router.</span>
+                            <span>📷 <strong>BUKTI:</strong> Screenshot CMD PC-Admin saat berhasil Ping ke 192.168.10.1 (Reply).</span>
                         </div>
                     </div>
-                    <button onclick="toggleHint('hint1')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Buka Modul: NAT Overload</button>
+                    <button onclick="toggleHint('hint1')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Hint: Cek Interface & IP</button>
                     <div id="hint1" class="hidden-content mt-2 p-3 bg-gray-800 border-l-2 border-blue-500 text-xs text-gray-300">
-                        <strong>Modul 11 - NAT Overload:</strong><br>
-                        1. int g0/0 -> ip nat inside<br>
-                        2. int g0/1 -> ip nat outside<br>
-                        3. access-list 1 permit 192.168.10.0 0.0.0.255<br>
-                        4. ip nat inside source list 1 interface g0/1 overload
+                        1. Router: <code>int g0/0</code> -> <code>no shutdown</code>.<br>
+                        2. PC-Admin: Cek Gateway, jangan sampai salah angka (misal .254 salah, harusnya .1).
                     </div>
                 </div>
 
                 <div class="cyber-border p-5 rounded bg-gray-900" id="mission2">
                     <div class="flex justify-between items-center mb-2">
-                        <h2 class="text-xl text-blue-400 font-bold">MISI 2: SECURITY (ACL)</h2>
+                        <h2 class="text-xl text-blue-400 font-bold">LEVEL 3: AKSES INTERNET</h2>
                         <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">PENDING</span>
                     </div>
-                    <p class="mb-4 text-sm text-gray-300">Blokir PC Magang (192.168.10.99) ke Server. Izinkan yang lain.</p>
+                    <p class="mb-4 text-sm text-gray-300">Router tidak tahu jalan ke Internet (Ping 8.8.8.8 RTO).</p>
                     <div class="space-y-3">
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="2" data-label="ACL Deny Created">
-                            <span>Buat ACL: Deny Host 192.168.10.99</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="2" data-label="Default Route Added">
+                            <span>Tambahkan Default Route (0.0.0.0)</span>
                         </label>
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="2" data-label="ACL Permit All Created">
-                            <span>Buat ACL: Permit Any</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="2" data-label="ACL Applied to Interface">
-                            <span>Pasang di Interface (ip access-group)</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="2" data-label="NAT Configured">
+                            <span>Konfigurasi NAT (Inside, Outside, Overload)</span>
                         </label>
                         <div class="doc-hint p-2 border border-dashed border-yellow-600 rounded bg-yellow-900/20">
-                            <span>📷 <strong>DOKUMENTASI:</strong> Screenshot PC Magang PING ke Server hasil "Destination Host Unreachable".</span>
+                            <span>📷 <strong>BUKTI:</strong> Screenshot CMD PC-Admin saat berhasil Ping ke 8.8.8.8 (Reply).</span>
                         </div>
                     </div>
-                    <button onclick="toggleHint('hint2')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Buka Modul: Security ACL</button>
+                    <button onclick="toggleHint('hint2')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Hint: Routing & NAT</button>
                     <div id="hint2" class="hidden-content mt-2 p-3 bg-gray-800 border-l-2 border-blue-500 text-xs text-gray-300">
-                        <strong>Modul 12 - ACL:</strong><br>
-                        1. access-list 10 deny host 192.168.10.99<br>
-                        2. access-list 10 permit any<br>
-                        3. int g0/0 -> ip access-group 10 in
+                        1. <code>ip route 0.0.0.0 0.0.0.0 [IP_ISP]</code> (Cek IP Server Google Gateway).<br>
+                        2. Jangan lupa <code>ip nat inside</code> di G0/0 dan <code>ip nat outside</code> di G0/1.
                     </div>
                 </div>
 
                 <div class="cyber-border p-5 rounded bg-gray-900" id="mission3">
                     <div class="flex justify-between items-center mb-2">
-                        <h2 class="text-xl text-blue-400 font-bold">MISI 3: SERVICES & IOT</h2>
+                        <h2 class="text-xl text-blue-400 font-bold">LEVEL 4: SERVICES & IOT</h2>
                         <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">PENDING</span>
                     </div>
-                    <p class="mb-4 text-sm text-gray-300">Aktifkan Email Server dan Otomatisasi AC.</p>
+                    <p class="mb-4 text-sm text-gray-300">Email error dan Lampu Otomatis tidak berfungsi.</p>
                     <div class="space-y-3">
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="Email Server Configured">
-                            <span>Server: Set Domain, User, & Service ON</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="Server Services ON">
+                            <span>Server-Office: Nyalakan Service HTTP & Email</span>
                         </label>
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="Email Client Success">
-                            <span>PC Bos: Config Email & Kirim Test</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="Fix Email Client IP">
+                            <span>PC-Staff: Perbaiki IP Server di Email Config</span>
                         </label>
                         <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="IoT Automation Active">
-                            <span>IoT: Rule (If Temp > 25 Then AC On)</span>
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="IoT Connected">
+                            <span>IoT: Hubungkan Motion & Light ke SSID "OFFICE_IOT"</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="task-check form-checkbox h-5 w-5 text-blue-500 rounded" data-mission="3" data-label="IoT Rule Created">
+                            <span>IoT: Buat Rule (If Motion On -> Light On)</span>
                         </label>
                         <div class="doc-hint p-2 border border-dashed border-yellow-600 rounded bg-yellow-900/20">
-                            <span>📷 <strong>DOKUMENTASI:</strong> 1. Screenshot Email "Send Success". 2. Screenshot AC menyala.</span>
+                            <span>📷 <strong>BUKTI:</strong> 1. SS Email PC-Staff "Send Success". 2. SS Lampu menyala saat ada gerakan.</span>
                         </div>
                     </div>
-                    <button onclick="toggleHint('hint3')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Buka Modul: Services & IoT</button>
+                    <button onclick="toggleHint('hint3')" class="mt-4 text-xs text-blue-400 hover:text-white underline">[?] Hint: Salah IP & Salah SSID</button>
                     <div id="hint3" class="hidden-content mt-2 p-3 bg-gray-800 border-l-2 border-blue-500 text-xs text-gray-300">
-                        <strong>Modul 13 & 04:</strong><br>
-                        - Email: Klik tombol SET domain.<br>
-                        - Client: Isi IP Server, bukan nama domain.<br>
-                        - IoT: Pastikan Smartphone & Alat connect ke SSID Gateway.
+                        1. PC-Staff Email: Cek Server Address, ganti 192.168.1.1 menjadi IP Server asli (10.5).<br>
+                        2. IoT: SSID di alat masih 'Default', ubah ke 'OFFICE_IOT' pass '12345678'.
                     </div>
                 </div>
+
             </div>
 
             <div class="lg:col-span-1">
-                <div class="sticky top-6 space-y-6">
-                    <div class="border border-blue-600 p-5 rounded bg-gray-900 shadow-lg shadow-blue-900/20">
-                        <h3 class="text-white font-bold mb-4 border-b border-gray-700 pb-2">DATA REFERENSI</h3>
+                <div class="sticky top-6 space-y-4">
+                    
+                    <a href="https://drive.google.com/file/d/1aF9FtdWXjZsWsh94-fgORrjvVttlUUCb/view?usp=drive_link" target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded shadow-lg shadow-blue-500/30 transition duration-300 border border-blue-400">
+                        ⬇️ DOWNLOAD SOAL (.PKT)
+                    </a>
+
+                    <div class="border border-red-500 p-5 rounded bg-gray-900 shadow-lg shadow-red-900/20">
+                        <h3 class="text-white font-bold mb-4 border-b border-gray-700 pb-2">DATA REFERENSI (BENAR)</h3>
                         <div class="text-xs space-y-3 font-mono text-gray-300">
-                            <div class="p-2 bg-gray-800 rounded"><span class="text-blue-400 block font-bold">ROUTER GATEWAY</span>LAN: 192.168.10.1 / WAN: 200.1.1.1</div>
-                            <div class="p-2 bg-gray-800 rounded"><span class="text-blue-400 block font-bold">PC BOS (VIP)</span>IP: 192.168.10.10</div>
-                            <div class="p-2 bg-gray-800 rounded"><span class="text-blue-400 block font-bold">PC MAGANG</span>IP: 192.168.10.99</div>
-                            <div class="p-2 bg-gray-800 rounded"><span class="text-blue-400 block font-bold">SERVER OFFICE</span>IP: 192.168.10.5</div>
+                            <div class="p-2 bg-gray-800 rounded">
+                                <span class="text-red-400 block font-bold">ROUTER GATEWAY</span>
+                                LAN: 192.168.10.1<br>
+                                WAN: 8.8.8.1 (Ke Arah ISP)
+                            </div>
+                            <div class="p-2 bg-gray-800 rounded">
+                                <span class="text-red-400 block font-bold">PC ADMIN</span>
+                                IP: 192.168.10.2<br>
+                                GW: 192.168.10.1
+                            </div>
+                            <div class="p-2 bg-gray-800 rounded">
+                                <span class="text-red-400 block font-bold">PC STAFF</span>
+                                IP: 192.168.10.3<br>
+                                GW: 192.168.10.1
+                            </div>
+                            <div class="p-2 bg-gray-800 rounded">
+                                <span class="text-red-400 block font-bold">SERVER OFFICE</span>
+                                IP: 192.168.10.5<br>
+                                Domain: kantor.com
+                            </div>
                         </div>
                     </div>
+                    
                     <button onclick="generateReport()" class="w-full btn-cyber py-4 font-bold text-lg rounded shadow-lg">SUBMIT LAPORAN 📤</button>
-                    <p class="text-xs text-gray-500 text-center">Klik untuk melihat Rapor Hasil Pengerjaan</p>
+                    <p class="text-xs text-gray-500 text-center">Klik jika semua sistem sudah pulih</p>
                 </div>
             </div>
         </div>
@@ -207,33 +220,33 @@
 
     <div id="finalReport" class="hidden-content min-h-screen p-4 flex items-center justify-center">
         <div class="report-card max-w-3xl w-full p-8 relative shadow-2xl">
-            <div class="text-center border-b-2 border-blue-500 pb-4 mb-6">
-                <h2 class="text-xl text-blue-300 tracking-[0.3em] font-bold">MISSION LOG</h2>
+            <div class="text-center border-b-2 border-red-500 pb-4 mb-6">
+                <h2 class="text-xl text-red-300 tracking-[0.3em] font-bold">MISSION DEBRIEF</h2>
                 <h1 class="text-4xl text-white font-bold mt-2">LKP INDO JAYA</h1>
-                <p class="text-gray-400 text-sm">Official Assessment Report</p>
+                <p class="text-gray-400 text-sm">Troubleshooting Assessment Report</p>
             </div>
             <div class="flex flex-col md:flex-row justify-between mb-8 bg-gray-900/80 p-4 rounded border border-gray-700">
                 <div>
-                    <p class="text-xs text-gray-500">CODENAME / SISWA</p>
+                    <p class="text-xs text-gray-500">TEKNISI / SISWA</p>
                     <p class="text-2xl text-white font-bold uppercase" id="reportName">UNKNOWN</p>
                 </div>
                 <div class="mt-4 md:mt-0 text-right">
-                    <p class="text-xs text-gray-500">TANGGAL PENGERJAAN</p>
-                    <p class="text-lg text-blue-400 font-mono" id="reportDate">--/--/----</p>
+                    <p class="text-xs text-gray-500">TANGGAL PERBAIKAN</p>
+                    <p class="text-lg text-red-400 font-mono" id="reportDate">--/--/----</p>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4 mb-8">
                 <div class="bg-gray-800 p-4 rounded text-center">
-                    <p class="text-gray-400 text-xs">PROGRESS</p>
+                    <p class="text-gray-400 text-xs">RECOVERY PROGRESS</p>
                     <p class="text-4xl font-bold text-white" id="reportScore">0%</p>
                 </div>
                 <div class="bg-gray-800 p-4 rounded text-center">
-                    <p class="text-gray-400 text-xs">MISSION STATUS</p>
-                    <p class="text-2xl font-bold mt-1" id="reportStatus">PENDING</p>
+                    <p class="text-gray-400 text-xs">NETWORK STATUS</p>
+                    <p class="text-2xl font-bold mt-1" id="reportStatus">CRITICAL</p>
                 </div>
             </div>
             <div class="mb-6">
-                <h3 class="text-blue-400 text-sm font-bold mb-3 border-b border-gray-700 pb-1">RINCIAN TUGAS:</h3>
+                <h3 class="text-red-400 text-sm font-bold mb-3 border-b border-gray-700 pb-1">LOG PERBAIKAN:</h3>
                 <ul class="text-sm space-y-2 font-mono text-gray-300 h-40 overflow-y-auto pr-2" id="reportList"></ul>
             </div>
             
@@ -243,13 +256,13 @@
                 </button>
             </div>
 
-            <div class="bg-blue-900/20 border border-blue-500/30 p-4 rounded text-center">
+            <div class="bg-red-900/20 border border-red-500/30 p-4 rounded text-center">
                 <p class="text-xs text-gray-300">
-                    ⚠ <strong>INSTRUKSI PENGUMPULAN:</strong> Screenshot halaman ini, masukkan ke Word, dan upload ke <strong>Google Drive</strong>.
+                    ⚠ <strong>INSTRUKSI:</strong> Screenshot halaman ini sebagai bukti perbaikan sistem.
                 </p>
             </div>
             <div class="mt-6 text-center">
-                <button onclick="editReport()" class="text-xs text-gray-500 hover:text-white underline">&lt; Kembali untuk memperbaiki</button>
+                <button onclick="editReport()" class="text-xs text-gray-500 hover:text-white underline">&lt; Kembali untuk revisi</button>
             </div>
         </div>
     </div>
@@ -265,37 +278,23 @@
                 <div class="p-3 bg-gray-800 rounded">
                     <strong class="text-white block mb-1">1. Format File</strong>
                     <ul class="list-disc pl-5">
-                        <li>Buka Microsoft Word.</li>
-                        <li>Ukuran Kertas: A4.</li>
-                        <li>Header Atas: <strong>"Final Project - Nama Kamu"</strong>.</li>
+                        <li>Header: <strong>"Laporan Troubleshooting - Nama Kamu"</strong>.</li>
                     </ul>
                 </div>
-
                 <div class="p-3 bg-gray-800 rounded">
-                    <strong class="text-white block mb-1">2. Isi Laporan</strong>
-                    <p class="mb-2">Laporan harus berisi 4 Gambar Screenshot utama:</p>
+                    <strong class="text-white block mb-1">2. Bukti Screenshot Wajib</strong>
                     <ul class="list-decimal pl-5 space-y-1">
-                        <li><span class="text-yellow-400">Screenshot Halaman Rapor Ini</span> (Bukti Misi Selesai).</li>
-                        <li><span class="text-blue-400">Bukti Misi 1:</span> Hasil command <code>show ip nat translations</code>.</li>
-                        <li><span class="text-blue-400">Bukti Misi 2:</span> Hasil Ping gagal dari PC Magang.</li>
-                        <li><span class="text-blue-400">Bukti Misi 3:</span> Email sukses terkirim.</li>
+                        <li><span class="text-yellow-400">Screenshot Rapor Ini</span> (Bukti Kelulusan).</li>
+                        <li><span class="text-blue-400">Bukti Level 1&2:</span> Ping PC-Admin ke Gateway (Reply).</li>
+                        <li><span class="text-blue-400">Bukti Level 3:</span> Ping PC-Admin ke 8.8.8.8 (Reply).</li>
+                        <li><span class="text-blue-400">Bukti Level 4:</span> Email Sukses & Lampu Nyala.</li>
                     </ul>
                 </div>
-
                 <div class="p-3 bg-gray-800 rounded">
-                    <strong class="text-white block mb-1">3. Cara Menyimpan</strong>
-                    <ul class="list-disc pl-5">
-                        <li>Klik File > Save As.</li>
-                        <li>Nama File: <code class="text-green-400">Final_NamaLengkap.docx</code></li>
-                    </ul>
-                </div>
-
-                <div class="p-3 bg-gray-800 rounded">
-                    <strong class="text-white block mb-1">4. Upload</strong>
-                    <p>Upload file .docx tersebut ke link Google Drive yang diberikan Instruktur.</p>
+                    <strong class="text-white block mb-1">3. Upload</strong>
+                    <p>Simpan docx dan upload ke Google Drive Instruktur.</p>
                 </div>
             </div>
-
             <button onclick="closeGuide()" class="mt-4 w-full bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-2 rounded transition">
                 TUTUP PANDUAN
             </button>
@@ -320,7 +319,7 @@
             progressBar.style.width = percentage + '%';
             progressBar.innerText = percentage + '%';
             if (percentage === 100) {
-                progressBar.classList.remove('bg-blue-600');
+                progressBar.classList.remove('bg-red-600');
                 progressBar.classList.add('bg-green-500');
             }
         }
@@ -335,7 +334,7 @@
             if (missionChecks.length === missionChecksDone.length) {
                 missionDiv.classList.add('mission-complete');
                 badge.className = "bg-green-900 text-green-200 text-xs px-2 py-1 rounded";
-                badge.innerText = "SELESAI";
+                badge.innerText = "SOLVED";
             } else {
                 missionDiv.classList.remove('mission-complete');
                 badge.className = "bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded";
@@ -352,14 +351,13 @@
             }
         }
 
-        // REPORT FUNCTIONS
         function generateReport() {
             const name = document.getElementById('studentName').value;
             const completedChecks = document.querySelectorAll('.task-check:checked');
             const completedCount = completedChecks.length;
             
             if (!name) {
-                alert("Mohon isi Nama Lengkap Anda terlebih dahulu!");
+                alert("Mohon isi Nama Teknisi terlebih dahulu!");
                 return;
             }
 
@@ -372,15 +370,15 @@
             const scoreEl = document.getElementById('reportScore');
             
             if (percentage === 100) {
-                statusEl.innerText = "MISSION ACCOMPLISHED";
+                statusEl.innerText = "SYSTEM RESTORED";
                 statusEl.className = "text-2xl font-bold mt-1 text-green-400";
                 scoreEl.className = "text-4xl font-bold text-green-400";
             } else if (percentage >= 70) {
-                statusEl.innerText = "PARTIAL SUCCESS";
+                statusEl.innerText = "PARTIAL RECOVERY";
                 statusEl.className = "text-2xl font-bold mt-1 text-yellow-400";
                 scoreEl.className = "text-4xl font-bold text-yellow-400";
             } else {
-                statusEl.innerText = "MISSION FAILED";
+                statusEl.innerText = "SYSTEM FAILED";
                 statusEl.className = "text-2xl font-bold mt-1 text-red-500";
                 scoreEl.className = "text-4xl font-bold text-red-500";
             }
@@ -391,9 +389,9 @@
                 const label = box.getAttribute('data-label');
                 const li = document.createElement('li');
                 if (box.checked) {
-                    li.innerHTML = `<span class="text-green-500">[SUKSES]</span> ${label}`;
+                    li.innerHTML = `<span class="text-green-500">[FIXED]</span> ${label}`;
                 } else {
-                    li.innerHTML = `<span class="text-red-500">[GAGAL]</span> ${label}`;
+                    li.innerHTML = `<span class="text-red-500">[BROKEN]</span> ${label}`;
                 }
                 reportList.appendChild(li);
             });
@@ -408,7 +406,6 @@
             document.getElementById('mainDashboard').classList.remove('hidden-content');
         }
 
-        // GUIDE MODAL FUNCTIONS
         function showGuide() {
             document.getElementById('guideModal').classList.remove('hidden-content');
         }
