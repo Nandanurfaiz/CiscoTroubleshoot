@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TROUBLESHOOTING CHALLENGE - LKP INDO JAYA</title>
+    <title>Cisco Challenge - LKP INDO JAYA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
@@ -19,7 +19,7 @@
             transition: all 0.3s;
         }
         .cyber-border:hover {
-            border-color: #f43f5e;
+            border-color: #f43f5e; /* Merah Muda untuk kesan Urgent */
             box-shadow: 0 0 15px rgba(244, 63, 94, 0.3);
         }
         .btn-cyber {
@@ -33,7 +33,10 @@
             color: #0f172a;
             box-shadow: 0 0 15px #38bdf8;
         }
-        .hidden-content { display: none !important; }
+        /* Utility Classes */
+        .hidden-content { 
+            display: none !important; 
+        }
         .mission-complete {
             background-color: rgba(16, 185, 129, 0.1);
             border-left: 5px solid #10b981;
@@ -47,12 +50,14 @@
             align-items: center;
             gap: 5px;
         }
+        /* Report Card Style */
         .report-card {
             background: #0f172a;
             border: 4px solid #f43f5e;
             background-image: radial-gradient(#1e293b 1px, transparent 1px);
             background-size: 20px 20px;
         }
+        /* Modal Style */
         .modal {
             background-color: rgba(0, 0, 0, 0.95);
             position: fixed;
@@ -205,19 +210,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="border border-purple-500 p-5 rounded bg-gray-900 shadow-lg shadow-purple-900/20">
-                        <h3 class="text-purple-400 font-bold mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
-                            💡 CLUE LEVEL 4
-                        </h3>
-                        <div class="text-sm text-gray-300 font-mono space-y-3 leading-relaxed">
-                            <p>
-                                🔍 Ubah IP Address setiap device IoT menjadi statis.
-                            </p>
-
-                        </div>
-                    </div>
-
+                    
                     <button onclick="generateReport()" class="w-full btn-cyber py-4 font-bold text-lg rounded shadow-lg">SUBMIT LAPORAN 📤</button>
                     <p class="text-xs text-gray-500 text-center">Klik jika semua sistem sudah pulih</p>
                 </div>
@@ -262,6 +255,7 @@
                     📄 PANDUAN PEMBUATAN LAPORAN
                 </button>
             </div>
+
             <div class="bg-red-900/20 border border-red-500/30 p-4 rounded text-center">
                 <p class="text-xs text-gray-300">
                     ⚠ <strong>INSTRUKSI:</strong> Screenshot halaman ini sebagai bukti perbaikan sistem.
@@ -279,6 +273,7 @@
                 <h3 class="text-xl text-yellow-500 font-bold">PANDUAN LAPORAN WORD</h3>
                 <button onclick="closeGuide()" class="text-gray-400 hover:text-white">&times;</button>
             </div>
+            
             <div class="text-sm text-gray-300 space-y-4 h-80 overflow-y-auto pr-2">
                 <div class="p-3 bg-gray-800 rounded">
                     <strong class="text-white block mb-1">1. Format File</strong>
